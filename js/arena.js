@@ -1,8 +1,8 @@
 import Gladiator from './gladiator.js'
+
 export default class Arena {
 
   constructor(name) {
-
     this.gladiators = []
     this.name = name.charAt(0).toUpperCase() + name.substring(1)
   }
@@ -24,8 +24,6 @@ export default class Arena {
       return  'both gladiators are dead';
 
   } else {
-      console.log(this.gladiators[0].weapon)
-      console.log(this.gladiators[1].weapon)
       switch (this.gladiators[0].weapon) {
           case 'Trident':
               if (this.gladiators[1].weapon === 'Spear') { this.gladiators.pop()} else {this.gladiators.shift()}
